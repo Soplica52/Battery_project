@@ -31,7 +31,27 @@ namespace Battery
             battery.DisplayParam();
             
             // change the vaues of object fields
-            battery.
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Battery bat = new Battery(100.343, 13.234, 55, 100, true);
+            bat.DisplayParam();
+
+            bat.socChange = 2020;
+            bat.DisplayParam();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GC.Collect(1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Battery.batteryObjectNumber.ToString());
         }
     }
 }
