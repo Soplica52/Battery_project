@@ -53,5 +53,20 @@ namespace Battery
         {
             MessageBox.Show(Battery.batteryObjectNumber.ToString());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Battery battery1 = new Battery(23.2, 12, 50, 8, false);
+            Battery battery2 = new Battery(21.2, 25, 2, 25, false);
+            Battery bat3 = new Battery();
+
+            double seriesTotalVoltage = battery1 + battery2;
+
+            double totalCapacity = battery1 | battery2;
+
+            MessageBox.Show(seriesTotalVoltage.ToString());
+
+            MessageBox.Show(totalCapacity.ToString());
+        }
     }
 }

@@ -7,3 +7,12 @@ C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery\bin\Debug\Bat
 C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery\bin\Debug\Battery.pdb
 C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery\obj\Debug\Battery.exe
 C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery\obj\Debug\Battery.pdb
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\bin\Debug\Battery.exe.config
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\bin\Debug\Battery.exe
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\bin\Debug\Battery.pdb
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.csprojAssemblyReference.cache
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.Form1.resources
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.Properties.Resources.resources
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.csproj.GenerateResource.cache
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.exe
+C:\Users\s0407714\source\repos\OOP_project\Battery_project\Battery_project\Battery\obj\Debug\Battery.pdb

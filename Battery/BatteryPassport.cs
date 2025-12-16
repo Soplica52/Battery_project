@@ -8,12 +8,19 @@ namespace Battery
 {
     class BatteryPassport
     {
-        string serialNumber;
+        private static int passportCounter = 0; // shared counter
+        private string serialNumber;
 
-        //how to make proper access for private field
-            public BatteryPassport()
+        // Read-only access to serial number
+        public string SerialNumber
         {
-            serialNumber = "1234567890";
+            get { return serialNumber; }
+        }
+
+        public BatteryPassport()
+        {
+            passportCounter++;
+            serialNumber = "BP-" + passportCounter.ToString("D6");
         }
     }
 }

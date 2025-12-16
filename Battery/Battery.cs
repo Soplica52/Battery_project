@@ -24,6 +24,9 @@ namespace Battery
         int maximumTemperature;
         bool isDamaged;
 
+
+        private BatteryPassport passport;
+
         public static int batteryObjectNumber { get; set; }
 
         public Battery()
@@ -36,9 +39,13 @@ namespace Battery
             maximumTemperature = 60;
             isDamaged = false;
 
+            passport = new BatteryPassport(); // assign passport
+
             //every time the object is created 
             batteryObjectNumber++;
         }
+
+
 
         public Battery(
             double capacity,
@@ -55,11 +62,11 @@ namespace Battery
 
             batteryObjectNumber++;
         }
-        
+
         //Destructor
         ~Battery()
         {
-            MessageBox.Show("Battery is destroyed (destructor is working just now)");
+            
         }
 
         public double socChange
@@ -75,24 +82,25 @@ namespace Battery
                 {
                     value = 0;
                 }
-                
-                    SOC = value;
-                
+
+                SOC = value;
+
             }
             get
             {
-                
+
                 //areato specify and controll return process of SOC value
                 return SOC;
             }
         }
-        
-        
+
+
 
         //method for displaying the parameters values
         public void DisplayParam()
         {
-            MessageBox.Show("Battery type: " + type.ToString() + "\r\n" +
+            MessageBox.Show("Battery Passport: " + passport.SerialNumber + "\r\n" +
+                "Battery type: " + type.ToString() + "\r\n" +
                 "Capacity: " + capacity.ToString() + " mAh" + "\r\n" +
                 "Nominal Voltage: " + nominalVoltage.ToString() + " V" + "\r\n" +
                 "Isolation colour: " + isolationColour + "\r\n" +
@@ -100,5 +108,26 @@ namespace Battery
                 "Maximum temperature: " + maximumTemperature.ToString() + " degrees" + "\r\n" +
                 "Is Damaged? : " + isDamaged.ToString() + "\r\n");
         }
+        public static double operator +(Battery b1, Battery b2)
+        {
+            MessageBox.Show("Two batteranodfnvaofdkjvn");
+            return b1.nominalVoltage + b2.nominalVoltage;
+        }
+        public static double operator |(Battery b1, Battery b2)
+        {
+            MessageBox.Show("Capacity");
+            return (b1.capacity + b2.capacity) / 2;
+        }
+        public static Battery operator *(Battery b1, Battery b2)
+        {
+            Battery battery = new Battery();
+            battery.nominalVoltage = b1.nominalVoltage + b2.nominalVoltage;
+            battery.socChange = (b1.SOC + b2.SOC) / 2;
+
+            battery.DisplayParam();
+
+            return battery;
+        }
+
     }
 }
