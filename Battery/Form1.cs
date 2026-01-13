@@ -68,5 +68,37 @@ namespace Battery
 
             MessageBox.Show(totalCapacity.ToString());
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //declaration of the object
+        EnergyStorage energyStorage;
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //create the object and disable the button after clicking
+            //energyStorage = new EnergyStorage();
+            energyStorage = new Battery();
+            button5.Enabled = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            energyStorage.Charge(5);
+
+            //update the chart
+            energyStorage.DrawSOCPlot(chart1);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            energyStorage.Discharge(5);
+
+            //update the chart
+            energyStorage.DrawSOCPlot(chart1);
+        }
     }
 }

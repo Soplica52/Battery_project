@@ -14,7 +14,7 @@ namespace Battery
         solid_oxide,
         lead_acid
     }
-    class Battery
+    class Battery:EnergyStorage //
     {
         BatteryType type;
         double capacity; //[Ah]
